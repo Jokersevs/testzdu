@@ -4,34 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Опитувальник</title>
-    <style>
-        body {
-            font-family: 'Times New Roman', Times, serif;
-        }
-        .question {
-            align-items: center;
-            margin-bottom: 20px;
-            margin-left: 30px;
-        }
-        .question h3 {
-            margin-bottom: 10px;
-        }
-        .answer {
-            margin-left: 30px;
-        }
-
-        h1,h2 {
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body class="no-copy">
     <h1>Опитувальник</h1>
     <!-- #region Block1 -->
-
+<div id="Block1" class="Block visible">
     <h2>Блок 1</h2>
 
-    <form action="#" method="post">
+    <form class="test_form" action="#" method="post">
         <!-- Questions begin -->
         <div class="question">
             <h3>1. Я дуже чутливий до образ.</h3>
@@ -573,23 +554,24 @@
         </div>
 
         <!-- Questions end -->
-        <input type="submit" value="Наступний блок питань">
+        <button onclick="showNextBlock(1, event)">Наступний блок питань</button>
     </form>
+</div>
     <!-- #endregion -->
 
     <!-- #region Block2 -->
-
+<div id="Block2" class="Block hidden">
     <h2>Блок 2</h2>
 
-    <form action="#" method="post">
+    <form class="test_form" action="#" method="post">
         <!-- Questions begin -->
         <div class="question">
             <h3>51. Перешкоди на шляху до досягнення мети підштовхують мене діяти ще рішучіше.</h3>
             <div class="answer">
-                   <input type="radio" name="question1" value="yes" id="q1yes">
-                   <label for="q1yes">Так</label><br>
-                   <input type="radio" name="question1" value="no" id="q1no">
-                   <label for="q1no">Ні</label>
+                   <input type="radio" name="question51" value="yes" id="q51yes">
+                   <label for="q51yes">Так</label><br>
+                   <input type="radio" name="question51" value="no" id="q51no">
+                   <label for="q51no">Ні</label>
                </div>
            </div>
    
@@ -597,30 +579,30 @@
                <h3>52. Буває так, що я без причин знаходжуся в такому сварливому настрою, що зі мною
                 краще не розмовляти.</h3>
                <div class="answer">
-                   <input type="radio" name="question2" value="yes" id="q2yes">
-                   <label for="q2yes">Так</label><br>
-                   <input type="radio" name="question2" value="no" id="q2no">
-                   <label for="q2no">Ні</label>
+                   <input type="radio" name="question52" value="yes" id="q52yes">
+                   <label for="q52yes">Так</label><br>
+                   <input type="radio" name="question52" value="no" id="q52no">
+                   <label for="q52no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>53. У школі я із задоволенням читав вірші, брав участь у шкільних концертах.</h3>
                <div class="answer">
-                   <input type="radio" name="question3" value="yes" id="q3yes">
-                   <label for="q3yes">Так</label><br>
-                   <input type="radio" name="question3" value="no" id="q3no">
-                   <label for="q3no">Ні</label>
+                   <input type="radio" name="question53" value="yes" id="q53yes">
+                   <label for="q53yes">Так</label><br>
+                   <input type="radio" name="question53" value="no" id="q53no">
+                   <label for="q53no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>53. У школі я із задоволенням читав вірші, брав участь у шкільних концертах.</h3>
                <div class="answer">
-                   <input type="radio" name="question4" value="yes" id="q4yes">
-                   <label for="q4yes">Так</label><br>
-                   <input type="radio" name="question4" value="no" id="q4no">
-                   <label for="q4no">Ні</label>
+                   <input type="radio" name="question54" value="yes" id="q54yes">
+                   <label for="q54yes">Так</label><br>
+                   <input type="radio" name="question54" value="no" id="q54no">
+                   <label for="q54no">Ні</label>
                </div>
            </div>
    
@@ -628,10 +610,10 @@
                <h3>55. Люди часто не розуміють логіку моїх міркувань, і мені не хочеться їм нічого
                 пояснювати.</h3>
                <div class="answer">
-                   <input type="radio" name="question5" value="yes" id="q5yes">
-                   <label for="q5yes">Так</label><br>
-                   <input type="radio" name="question5" value="no" id="q5no">
-                   <label for="q5no">Ні</label>
+                   <input type="radio" name="question55" value="yes" id="q55yes">
+                   <label for="q55yes">Так</label><br>
+                   <input type="radio" name="question55" value="no" id="q55no">
+                   <label for="q55no">Ні</label>
                </div>
            </div>
    
@@ -639,30 +621,30 @@
                <h3>56. Мені буває важко заснути через те, що проблеми прожитого дня або переживання за
                 майбутнє «крутяться» в голові.</h3>
                <div class="answer">
-                   <input type="radio" name="question6" value="yes" id="q6yes">
-                   <label for="q6yes">Так</label><br>
-                   <input type="radio" name="question6" value="no" id="q6no">
-                   <label for="q6no">Ні</label>
+                   <input type="radio" name="question56" value="yes" id="q56yes">
+                   <label for="q56yes">Так</label><br>
+                   <input type="radio" name="question56" value="no" id="q56no">
+                   <label for="q56no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>57. Я здатний захоплюватися, милуватися красою рослин, тварин, пейзажу.</h3>
                <div class="answer">
-                   <input type="radio" name="question7" value="yes" id="q7yes">
-                   <label for="q7yes">Так</label><br>
-                   <input type="radio" name="question7" value="no" id="q7no">
-                   <label for="q7no">Ні</label>
+                   <input type="radio" name="question57" value="yes" id="q57yes">
+                   <label for="q57yes">Так</label><br>
+                   <input type="radio" name="question57" value="no" id="q57no">
+                   <label for="q57no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>58. Мене турбує почуття, що я гірший за інших.</h3>
                <div class="answer">
-                   <input type="radio" name="question8" value="yes" id="q8yes">
-                   <label for="q8yes">Так</label><br>
-                   <input type="radio" name="question8" value="no" id="q8no">
-                   <label for="q8no">Ні</label>
+                   <input type="radio" name="question58" value="yes" id="q58yes">
+                   <label for="q58yes">Так</label><br>
+                   <input type="radio" name="question58" value="no" id="q58no">
+                   <label for="q58no">Ні</label>
                </div>
            </div>
    
@@ -670,30 +652,30 @@
                <h3>59. Мені подобається шукати незвичайні або навіть парадоксальні прийоми розв’язання
                 різних завдань.</h3>
                <div class="answer">
-                   <input type="radio" name="question9" value="yes" id="q9yes">
-                   <label for="q9yes">Так</label><br>
-                   <input type="radio" name="question9" value="no" id="q9no">
-                   <label for="q9no">Ні</label>
+                   <input type="radio" name="question59" value="yes" id="q59yes">
+                   <label for="q59yes">Так</label><br>
+                   <input type="radio" name="question59" value="no" id="q59no">
+                   <label for="q59no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>60. У дитинстві я був таким само сміливим та відважним, як мої ровесники.</h3>
                <div class="answer">
-                   <input type="radio" name="question10" value="yes" id="q10yes">
-                   <label for="q10yes">Так</label><br>
-                   <input type="radio" name="question10" value="no" id="q10no">
-                   <label for="q10no">Ні</label>
+                   <input type="radio" name="question60" value="yes" id="q60yes">
+                   <label for="q60yes">Так</label><br>
+                   <input type="radio" name="question60" value="no" id="q60no">
+                   <label for="q60no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>61. У школі я достатньо часто прогулював уроки без поважних причин.</h3>
                <div class="answer">
-                   <input type="radio" name="question11" value="yes" id="q11yes">
-                   <label for="q11yes">Так</label><br>
-                   <input type="radio" name="question11" value="no" id="q11no">
-                   <label for="q11no">Ні</label>
+                   <input type="radio" name="question61" value="yes" id="q61yes">
+                   <label for="q61yes">Так</label><br>
+                   <input type="radio" name="question61" value="no" id="q61no">
+                   <label for="q61no">Ні</label>
                </div>
            </div>
    
@@ -701,10 +683,10 @@
                <h3>62. При невдачах (хоча іншим вони здаються зовсім не трагічними) я впадаю у глибокий
                 відчай, проте він досить швидко проходить.</h3>
                <div class="answer">
-                   <input type="radio" name="question12" value="yes" id="q12yes">
-                   <label for="q12yes">Так</label><br>
-                   <input type="radio" name="question12" value="no" id="q12no">
-                   <label for="q12no">Ні</label>
+                   <input type="radio" name="question62" value="yes" id="q62yes">
+                   <label for="q62yes">Так</label><br>
+                   <input type="radio" name="question62" value="no" id="q62no">
+                   <label for="q62no">Ні</label>
                </div>
            </div>
    
@@ -712,20 +694,20 @@
                <h3>63. Буває так, що якась думка чи ідея заволодіває мною так невідкладно, що я записую її
                 на будь-чому, якщо знаходжусь у кафе, транспорті, вулиці.</h3>
                <div class="answer">
-                   <input type="radio" name="question13" value="yes" id="q13yes">
-                   <label for="q13yes">Так</label><br>
-                   <input type="radio" name="question13" value="no" id="q13no">
-                   <label for="q13no">Ні</label>
+                   <input type="radio" name="question63" value="yes" id="q63yes">
+                   <label for="q63yes">Так</label><br>
+                   <input type="radio" name="question63" value="no" id="q63no">
+                   <label for="q63no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>64. Бувало, в дитинстві я втікав з дому.</h3>
                <div class="answer">
-                   <input type="radio" name="question14" value="yes" id="q14yes">
-                   <label for="q14yes">Так</label><br>
-                   <input type="radio" name="question14" value="no" id="q14no">
-                   <label for="q14no">Ні</label>
+                   <input type="radio" name="question64" value="yes" id="q64yes">
+                   <label for="q64yes">Так</label><br>
+                   <input type="radio" name="question64" value="no" id="q64no">
+                   <label for="q64no">Ні</label>
                </div>
            </div>
    
@@ -733,20 +715,20 @@
                <h3>65. Інколи після конфлікту, образи буваю до того знервованим, що йти на роботу здається
                 неможливим.</h3>
                <div class="answer">
-                   <input type="radio" name="question15" value="yes" id="q15yes">
-                   <label for="q15yes">Так</label><br>
-                   <input type="radio" name="question15" value="no" id="q15no">
-                   <label for="q15no">Ні</label>
+                   <input type="radio" name="question65" value="yes" id="q65yes">
+                   <label for="q65yes">Так</label><br>
+                   <input type="radio" name="question65" value="no" id="q65no">
+                   <label for="q65no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>66. При невдачі я не втрачаю почуття гумору.</h3>
                <div class="answer">
-                   <input type="radio" name="question16" value="yes" id="q16yes">
-                   <label for="q16yes">Так</label><br>
-                   <input type="radio" name="question16" value="no" id="q16no">
-                   <label for="q16no">Ні</label>
+                   <input type="radio" name="question66" value="yes" id="q66yes">
+                   <label for="q66yes">Так</label><br>
+                   <input type="radio" name="question66" value="no" id="q66no">
+                   <label for="q66no">Ні</label>
                </div>
            </div>
    
@@ -754,30 +736,30 @@
                <h3>67. Вважають, що я розповідаю досить дивно, говорю речі, які надто глибокі для інших,
                 але не пояснюю, що я маю на увазі.</h3>
                <div class="answer">
-                   <input type="radio" name="question17" value="yes" id="q17yes">
-                   <label for="q17yes">Так</label><br>
-                   <input type="radio" name="question17" value="no" id="q17no">
-                   <label for="q17no">Ні</label>
+                   <input type="radio" name="question67" value="yes" id="q67yes">
+                   <label for="q67yes">Так</label><br>
+                   <input type="radio" name="question67" value="no" id="q67no">
+                   <label for="q67no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>68. Якщо я зроблю якийсь промах, то про це забуваю швидко.</h3>
                <div class="answer">
-                   <input type="radio" name="question18" value="yes" id="q18yes">
-                   <label for="q18yes">Так</label><br>
-                   <input type="radio" name="question18" value="no" id="q18no">
-                   <label for="q18no">Ні</label>
+                   <input type="radio" name="question68" value="yes" id="q68yes">
+                   <label for="q68yes">Так</label><br>
+                   <input type="radio" name="question68" value="no" id="q68no">
+                   <label for="q68no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>69. Я м’якосерда людина.</h3>
                <div class="answer">
-                   <input type="radio" name="question19" value="yes" id="q19yes">
-                   <label for="q19yes">Так</label><br>
-                   <input type="radio" name="question19" value="no" id="q19no">
-                   <label for="q19no">Ні</label>
+                   <input type="radio" name="question69" value="yes" id="q69yes">
+                   <label for="q69yes">Так</label><br>
+                   <input type="radio" name="question69" value="no" id="q69no">
+                   <label for="q69no">Ні</label>
                </div>
            </div>
    
@@ -785,10 +767,10 @@
                <h3>70. Вважаю, що песимістичне ставлення до життя є більш реалістичним, ніж
                 оптимістичне.</h3>
                <div class="answer">
-                   <input type="radio" name="question20" value="yes" id="q20yes">
-                   <label for="q20yes">Так</label><br>
-                   <input type="radio" name="question20" value="no" id="q20no">
-                   <label for="q20no">Ні</label>
+                   <input type="radio" name="question70" value="yes" id="q70yes">
+                   <label for="q70yes">Так</label><br>
+                   <input type="radio" name="question70" value="no" id="q70no">
+                   <label for="q70no">Ні</label>
                </div>
            </div>
    
@@ -796,30 +778,30 @@
                <h3>71. Можливо, дехто вважає мене консервативним, але я вважаю, що для аморального
                 вчинку або неетичної поведінки вибачень не існує.</h3>
                <div class="answer">
-                   <input type="radio" name="question21" value="yes" id="q21yes">
-                   <label for="q21yes">Так</label><br>
-                   <input type="radio" name="question21" value="no" id="q21no">
-                   <label for="q21no">Ні</label>
+                   <input type="radio" name="question71" value="yes" id="q71yes">
+                   <label for="q71yes">Так</label><br>
+                   <input type="radio" name="question71" value="no" id="q71no">
+                   <label for="q71no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>72. У шкільні роки я боявся відповідати у дошки перед класом.</h3>
                <div class="answer">
-                   <input type="radio" name="question22" value="yes" id="q22yes">
-                   <label for="q22yes">Так</label><br>
-                   <input type="radio" name="question22" value="no" id="q22no">
-                   <label for="q22no">Ні</label>
+                   <input type="radio" name="question72" value="yes" id="q72yes">
+                   <label for="q72yes">Так</label><br>
+                   <input type="radio" name="question72" value="no" id="q72no">
+                   <label for="q72no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>73. Я часто роблю вчинки за настроєм, а не за переконанням.</h3>
                <div class="answer">
-                   <input type="radio" name="question23" value="yes" id="q23yes">
-                   <label for="q23yes">Так</label><br>
-                   <input type="radio" name="question15" value="no" id="q23no">
-                   <label for="q23no">Ні</label>
+                   <input type="radio" name="question73" value="yes" id="q73yes">
+                   <label for="q73yes">Так</label><br>
+                   <input type="radio" name="question73" value="no" id="q73no">
+                   <label for="q73no">Ні</label>
                </div>
            </div>
    
@@ -827,10 +809,10 @@
                <h3>74. Я не можу приховати свої емоції: коли радію – кричу, стрибаю, співаю; коли мені
                 погано – плачу і жаліюсь близьким.</h3>
                <div class="answer">
-                   <input type="radio" name="question24" value="yes" id="q24yes">
-                   <label for="q24yes">Так</label><br>
-                   <input type="radio" name="question24" value="no" id="q24no">
-                   <label for="q24no">Ні</label>
+                   <input type="radio" name="question74" value="yes" id="q74yes">
+                   <label for="q74yes">Так</label><br>
+                   <input type="radio" name="question74" value="no" id="q74no">
+                   <label for="q74no">Ні</label>
                </div>
            </div>
    
@@ -838,50 +820,50 @@
                <h3>75. Члени моєї сім’ї вважають, що я обмежую їх вибір, нав’язуючи, як їм вчинити. Проте я
                 просто знаю, як краще.</h3>
                <div class="answer">
-                   <input type="radio" name="question25" value="yes" id="q25yes">
-                   <label for="q25yes">Так</label><br>
-                   <input type="radio" name="question25" value="no" id="q25no">
-                   <label for="q25no">Ні</label>
+                   <input type="radio" name="question75" value="yes" id="q75yes">
+                   <label for="q75yes">Так</label><br>
+                   <input type="radio" name="question75" value="no" id="q75no">
+                   <label for="q75no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>76. Я можу вдарити людину, яка мене образила.</h3>
                <div class="answer">
-                   <input type="radio" name="question26" value="yes" id="q26yes">
-                   <label for="q26yes">Так</label><br>
-                   <input type="radio" name="question26" value="no" id="q26no">
-                   <label for="q26no">Ні</label>
+                   <input type="radio" name="question76" value="yes" id="q76yes">
+                   <label for="q76yes">Так</label><br>
+                   <input type="radio" name="question76" value="no" id="q76no">
+                   <label for="q76no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>77. У юнацтві я залюбки брав участь у художній самодіяльності (театр, хор, танці тощо).</h3>
                <div class="answer">
-                   <input type="radio" name="question27" value="yes" id="q27yes">
-                   <label for="q27yes">Так</label><br>
-                   <input type="radio" name="question27" value="no" id="q27no">
-                   <label for="q27no">Ні</label>
+                   <input type="radio" name="question77" value="yes" id="q77yes">
+                   <label for="q77yes">Так</label><br>
+                   <input type="radio" name="question77" value="no" id="q77no">
+                   <label for="q77no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>78. Мене дуже засмутить, якщо я забуду виконати свою обіцянку.</h3>
                <div class="answer">
-                   <input type="radio" name="question28" value="yes" id="q28yes">
-                   <label for="q28yes">Так</label><br>
-                   <input type="radio" name="question29" value="no" id="q28no">
-                   <label for="q28no">Ні</label>
+                   <input type="radio" name="question78" value="yes" id="q78yes">
+                   <label for="q78yes">Так</label><br>
+                   <input type="radio" name="question78" value="no" id="q78no">
+                   <label for="q78no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>79. Про мій багатий внутрішній світ майже ніхто не здогадується.</h3>
                <div class="answer">
-                   <input type="radio" name="question29" value="yes" id="q29yes">
-                   <label for="q29yes">Так</label><br>
-                   <input type="radio" name="question29" value="no" id="q29no">
-                   <label for="q29no">Ні</label>
+                   <input type="radio" name="question79" value="yes" id="q79yes">
+                   <label for="q79yes">Так</label><br>
+                   <input type="radio" name="question79" value="no" id="q79no">
+                   <label for="q79no">Ні</label>
                </div>
            </div>
    
@@ -889,10 +871,10 @@
                <h3>80. Мене досить мучать докори сумління, якщо я згадую про негарний вчинок, який
                 зробив у дитинстві або юнацькі роки.</h3>
                <div class="answer">
-                   <input type="radio" name="question30" value="yes" id="q30yes">
-                   <label for="q30yes">Так</label><br>
-                   <input type="radio" name="question30" value="no" id="q30no">
-                   <label for="q30no">Ні</label>
+                   <input type="radio" name="question80" value="yes" id="q80yes">
+                   <label for="q80yes">Так</label><br>
+                   <input type="radio" name="question80" value="no" id="q80no">
+                   <label for="q80no">Ні</label>
                </div>
            </div>
    
@@ -900,10 +882,10 @@
                <h3>81. Буває так, що від дотику іншої людини почуття повного щастя буквально пронизує
                 мене.</h3>
                <div class="answer">
-                   <input type="radio" name="question31" value="yes" id="q31yes">
-                   <label for="q31yes">Так</label><br>
-                   <input type="radio" name="question31" value="no" id="q31no">
-                   <label for="q31no">Ні</label>
+                   <input type="radio" name="question81" value="yes" id="q81yes">
+                   <label for="q81yes">Так</label><br>
+                   <input type="radio" name="question81" value="no" id="q81no">
+                   <label for="q81no">Ні</label>
                </div>
            </div>
    
@@ -911,40 +893,40 @@
                <h3>82. Частіше я бачу склянку з рідиною (якщо її половина) наполовину повною, ніж
                 напівпорожньою.</h3>
                <div class="answer">
-                   <input type="radio" name="question32" value="yes" id="q32yes">
-                   <label for="q32yes">Так</label><br>
-                   <input type="radio" name="question32" value="no" id="q32no">
-                   <label for="q32no">Ні</label>
+                   <input type="radio" name="question82" value="yes" id="q82yes">
+                   <label for="q82yes">Так</label><br>
+                   <input type="radio" name="question82" value="no" id="q82no">
+                   <label for="q82no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>83. Більше всього я боюся стати серед своїх знайомих «білою вороною».</h3>
                <div class="answer">
-                   <input type="radio" name="question33" value="yes" id="q33yes">
-                   <label for="q33yes">Так</label><br>
-                   <input type="radio" name="question33" value="no" id="q33no">
-                   <label for="q33no">Ні</label>
+                   <input type="radio" name="question83" value="yes" id="q83yes">
+                   <label for="q83yes">Так</label><br>
+                   <input type="radio" name="question83" value="no" id="q83no">
+                   <label for="q83no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>84. Я відчуваю себе менш пристосованим до вимог життя, ніж інші.</h3>
                <div class="answer">
-                   <input type="radio" name="question34" value="yes" id="q34yes">
-                   <label for="q34yes">Так</label><br>
-                   <input type="radio" name="question34" value="no" id="q34no">
-                   <label for="q34no">Ні</label>
+                   <input type="radio" name="question84" value="yes" id="q84yes">
+                   <label for="q84yes">Так</label><br>
+                   <input type="radio" name="question84" value="no" id="q84no">
+                   <label for="q84no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>85. Я майже ніколи не відчуваю провини за те, що зробив.</h3>
                <div class="answer">
-                   <input type="radio" name="question35" value="yes" id="q35yes">
-                   <label for="q35yes">Так</label><br>
-                   <input type="radio" name="question35" value="no" id="q35no">
-                   <label for="q35no">Ні</label>
+                   <input type="radio" name="question85" value="yes" id="q85yes">
+                   <label for="q85yes">Так</label><br>
+                   <input type="radio" name="question85" value="no" id="q85no">
+                   <label for="q85no">Ні</label>
                </div>
            </div>
    
@@ -952,10 +934,10 @@
                <h3>86. Часто я занадто драматизую проблеми, що виникають, і надаю їм більшого значення,
                 ніж слід.</h3>
                <div class="answer">
-                   <input type="radio" name="question36" value="yes" id="q36yes">
-                   <label for="q36yes">Так</label><br>
-                   <input type="radio" name="question36" value="no" id="q36no">
-                   <label for="q36no">Ні</label>
+                   <input type="radio" name="question86" value="yes" id="q86yes">
+                   <label for="q86yes">Так</label><br>
+                   <input type="radio" name="question86" value="no" id="q86no">
+                   <label for="q86no">Ні</label>
                </div>
            </div>
    
@@ -963,40 +945,40 @@
                <h3>87. Я дуже організована людина, дотримуюсь цілеспрямовано наміченої цілі, ставлю
                 близькі та далекі перспективи справ, які потрібно виконати.</h3>
                <div class="answer">
-                   <input type="radio" name="question37" value="yes" id="q37yes">
-                   <label for="q37yes">Так</label><br>
-                   <input type="radio" name="question37" value="no" id="q37no">
-                   <label for="q37no">Ні</label>
+                   <input type="radio" name="question87" value="yes" id="q87yes">
+                   <label for="q87yes">Так</label><br>
+                   <input type="radio" name="question87" value="no" id="q87no">
+                   <label for="q87no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>88. Часто я не поступаюсь іншим з принципу.</h3>
                <div class="answer">
-                   <input type="radio" name="question38" value="yes" id="q38yes">
-                   <label for="q38yes">Так</label><br>
-                   <input type="radio" name="question38" value="no" id="q38no">
-                   <label for="q38no">Ні</label>
+                   <input type="radio" name="question88" value="yes" id="q88yes">
+                   <label for="q88yes">Так</label><br>
+                   <input type="radio" name="question88" value="no" id="q88no">
+                   <label for="q88no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>89. Мені важко виступати перед великою кількістю людей.</h3>
                <div class="answer">
-                   <input type="radio" name="question39" value="yes" id="q39yes">
-                   <label for="q39yes">Так</label><br>
-                   <input type="radio" name="question39" value="no" id="q39no">
-                   <label for="q39no">Ні</label>
+                   <input type="radio" name="question89" value="yes" id="q89yes">
+                   <label for="q89yes">Так</label><br>
+                   <input type="radio" name="question89" value="no" id="q89no">
+                   <label for="q89no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>90. Я можу з легкістю підняти настрій друзів у компанії.</h3>
                <div class="answer">
-                   <input type="radio" name="question40" value="yes" id="q40yes">
-                   <label for="q40yes">Так</label><br>
-                   <input type="radio" name="question40" value="no" id="q40no">
-                   <label for="q40no">Ні</label>
+                   <input type="radio" name="question90" value="yes" id="q90yes">
+                   <label for="q90yes">Так</label><br>
+                   <input type="radio" name="question90" value="no" id="q90no">
+                   <label for="q90no">Ні</label>
                </div>
            </div>
    
@@ -1004,10 +986,10 @@
                <h3>91. Я думаю, що налаштований на іншу, ніж решта людей, хвилю, оскільки помічаю дивні
                 речі, пов’язані з екстрасенсорикою.</h3>
                <div class="answer">
-                   <input type="radio" name="question41" value="yes" id="q41yes">
-                   <label for="q41yes">Так</label><br>
-                   <input type="radio" name="question41" value="no" id="q41no">
-                   <label for="q41no">Ні</label>
+                   <input type="radio" name="question91" value="yes" id="q91yes">
+                   <label for="q91yes">Так</label><br>
+                   <input type="radio" name="question91" value="no" id="q91no">
+                   <label for="q91no">Ні</label>
                </div>
            </div>
    
@@ -1015,20 +997,20 @@
                <h3>92. В дитинстві, коли був учнем, я часто переписував сторінку в зошиті, якщо робив на ній
                 помилки.</h3>
                <div class="answer">
-                   <input type="radio" name="question42" value="yes" id="q42yes">
-                   <label for="q42yes">Так</label><br>
-                   <input type="radio" name="question42" value="no" id="q42no">
-                   <label for="q42no">Ні</label>
+                   <input type="radio" name="question92" value="yes" id="q92yes">
+                   <label for="q92yes">Так</label><br>
+                   <input type="radio" name="question92" value="no" id="q92no">
+                   <label for="q92no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>93. Мені так шкода тварин у клітках, що навіть не хочеться відвідувати зоопарк або цирк.</h3>
                <div class="answer">
-                   <input type="radio" name="question43" value="yes" id="q43yes">
-                   <label for="q43yes">Так</label><br>
-                   <input type="radio" name="question43" value="no" id="q43no">
-                   <label for="q43no">Ні</label>
+                   <input type="radio" name="question93" value="yes" id="q93yes">
+                   <label for="q93yes">Так</label><br>
+                   <input type="radio" name="question93" value="no" id="q93no">
+                   <label for="q93no">Ні</label>
                </div>
            </div>
    
@@ -1036,20 +1018,20 @@
                <h3>94. В юнацтві я писав вірші про нерозділене кохання і безглуздість життя без коханої
                 людини.</h3>
                <div class="answer">
-                   <input type="radio" name="question44" value="yes" id="q44yes">
-                   <label for="q44yes">Так</label><br>
-                   <input type="radio" name="question44" value="no" id="q44no">
-                   <label for="q44no">Ні</label>
+                   <input type="radio" name="question94" value="yes" id="q94yes">
+                   <label for="q94yes">Так</label><br>
+                   <input type="radio" name="question94" value="no" id="q94no">
+                   <label for="q94no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>95. Я слідую такій моді, щоб вдягатися, як більшість людей мого віку.</h3>
                <div class="answer">
-                   <input type="radio" name="question45" value="yes" id="q45yes">
-                   <label for="q45yes">Так</label><br>
-                   <input type="radio" name="question45" value="no" id="q45no">
-                   <label for="q45no">Ні</label>
+                   <input type="radio" name="question95" value="yes" id="q95yes">
+                   <label for="q95yes">Так</label><br>
+                   <input type="radio" name="question95" value="no" id="q95no">
+                   <label for="q95no">Ні</label>
                </div>
            </div>
    
@@ -1057,10 +1039,10 @@
                <h3>96. Я вважаю за потрібне приховувати свою негативну думку про кого-небудь або про що-
                 небудь, особливо, коли мене про це не питають.</h3>
                <div class="answer">
-                   <input type="radio" name="question46" value="yes" id="q46yes">
-                   <label for="q46yes">Так</label><br>
-                   <input type="radio" name="question46" value="no" id="q46no">
-                   <label for="q46no">Ні</label>
+                   <input type="radio" name="question96" value="yes" id="q96yes">
+                   <label for="q96yes">Так</label><br>
+                   <input type="radio" name="question96" value="no" id="q96no">
+                   <label for="q96no">Ні</label>
                </div>
            </div>
    
@@ -1068,61 +1050,1579 @@
                <h3>97. Коли я щось розповідаю, то люблю домислити або викривити факти, щоб подивитися
                 на реакцію людей.</h3>
                <div class="answer">
-                   <input type="radio" name="question47" value="yes" id="q47yes">
-                   <label for="q47yes">Так</label><br>
-                   <input type="radio" name="question47" value="no" id="q47no">
-                   <label for="q47no">Ні</label>
+                   <input type="radio" name="question97" value="yes" id="q97yes">
+                   <label for="q97yes">Так</label><br>
+                   <input type="radio" name="question97" value="no" id="q97no">
+                   <label for="q97no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>98. Без гострих відчуттів у житті мені стає сумно.</h3>
                <div class="answer">
-                   <input type="radio" name="question48" value="yes" id="q48yes">
-                   <label for="q48yes">Так</label><br>
-                   <input type="radio" name="question48" value="no" id="q48no">
-                   <label for="q48no">Ні</label>
+                   <input type="radio" name="question98" value="yes" id="q98yes">
+                   <label for="q98yes">Так</label><br>
+                   <input type="radio" name="question98" value="no" id="q98no">
+                   <label for="q98no">Ні</label>
                </div>
            </div>
    
            <div class="question">
                <h3>99. Мій дім для мене – це:</h3>
                <div class="answer">
-                   <input type="radio" name="question49" value="a" id="q49a">
-                   <label for="q49a">а) моя фортеця;</label><br>
-                   <input type="radio" name="question49" value="b" id="q49b">
-                   <label for="q49b">b) сцена;</label><br>
-                   <input type="radio" name="question49" value="c" id="q49c">
-                   <label for="q49c">c) штаб;</label><br>
-                   <input type="radio" name="question49" value="d" id="q49d">
-                   <label for="q49d">d) прохідний двір;</label><br>
-                   <input type="radio" name="question49" value="e" id="q49e">
-                   <label for="q49e">е) сучасна квартира, як у всіх.</label><br>
+                   <input type="radio" name="question99" value="a" id="q99a">
+                   <label for="q99a">а) моя фортеця;</label><br>
+                   <input type="radio" name="question99" value="b" id="q99b">
+                   <label for="q99b">b) сцена;</label><br>
+                   <input type="radio" name="question99" value="c" id="q99c">
+                   <label for="q99c">c) штаб;</label><br>
+                   <input type="radio" name="question99" value="d" id="q99d">
+                   <label for="q99d">d) прохідний двір;</label><br>
+                   <input type="radio" name="question99" value="e" id="q99e">
+                   <label for="q99e">е) сучасна квартира, як у всіх.</label><br>
                </div>
            </div>
    
            <div class="question">
                <h3>100. Якщо хтось жартує на мою адресу, я:</h3>
                <div class="answer">
-                   <input type="radio" name="question50" value="a" id="q50a">
-                   <label for="q50a">а) не переношу цього і відкрито гніваюся;</label><br>
-                   <input type="radio" name="question50" value="b" id="q50b">
-                   <label for="q50b">b) сміюся разом з іншими, але сховаю образу, щоб потім висміяти «жартівника»;</label><br>
-                   <input type="radio" name="question50" value="c" id="q50c">
-                   <label for="q50c">c) переношу дуже болісно, але мовчу;</label><br>
-                   <input type="radio" name="question50" value="d" id="q50d">
-                   <label for="q50d">d) з мене будь-який жарт, як з гуся вода;</label><br>
-                   <input type="radio" name="question50" value="e" id="q50e">
-                   <label for="q50e">е) відповім злостивою «підколкою»;</label><br>
-                   <input type="radio" name="question50" value="f" id="q50f">
-                   <label for="q50f">f) якщо всі з мене сміються, можу й вдарити.</label><br>
+                   <input type="radio" name="question100" value="a" id="q100a">
+                   <label for="q100a">а) не переношу цього і відкрито гніваюся;</label><br>
+                   <input type="radio" name="question100" value="b" id="q100b">
+                   <label for="q100b">b) сміюся разом з іншими, але сховаю образу, щоб потім висміяти «жартівника»;</label><br>
+                   <input type="radio" name="question100" value="c" id="q100c">
+                   <label for="q100c">c) переношу дуже болісно, але мовчу;</label><br>
+                   <input type="radio" name="question100" value="d" id="q100d">
+                   <label for="q100d">d) з мене будь-який жарт, як з гуся вода;</label><br>
+                   <input type="radio" name="question100" value="e" id="q100e">
+                   <label for="q100e">е) відповім злостивою «підколкою»;</label><br>
+                   <input type="radio" name="question100" value="f" id="q100f">
+                   <label for="q100f">f) якщо всі з мене сміються, можу й вдарити.</label><br>
                </div>
            </div>
 
            <!-- Questions end -->
-           <input type="submit" value="Наступний блок питань">
+           <button onclick="showBackBlock(2, event)">Попередній блок питань</button>
+           <button onclick="showNextBlock(2, event)">Наступний блок питань</button>
        </form>
+</div>
        <!-- #endregion --> 
+
+    <!-- #region Block3 -->
+
+<div id="Block3" class="Block hidden">
+    <h2>Блок 3</h2>
+
+    <form class="test_form" action="#" method="post">
+        <!-- Questions begin -->
+        <div class="question">
+            <h3>101. Я прагну завжди бути в числі кращих працівників.</h3>
+            <div class="answer">
+                <input type="radio" name="question1" value="yes" id="q1yes">
+                <label for="q1yes">Так</label><br>
+                <input type="radio" name="question1" value="no" id="q1no">
+                <label for="q1no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>102. Я ретельно стежу за тим, щоб кожна річ у квартирі знаходилась на одному й тому ж
+                місці і серджуся, якщо хтось її перекладе.</h3>
+            <div class="answer">
+                <input type="radio" name="question2" value="yes" id="q2yes">
+                <label for="q2yes">Так</label><br>
+                <input type="radio" name="question2" value="no" id="q2no">
+                <label for="q2no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>103. Я здатний відволікатися від серйозних проблем, що потребують негайного
+                вирішення.</h3>
+            <div class="answer">
+                <input type="radio" name="question3" value="yes" id="q3yes">
+                <label for="q3yes">Так</label><br>
+                <input type="radio" name="question3" value="no" id="q3no">
+                <label for="q3no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>104. Мені подобається робота, яка потребує енергійної організаційної діяльності.</h3>
+            <div class="answer">
+                <input type="radio" name="question4" value="yes" id="q4yes">
+                <label for="q4yes">Так</label><br>
+                <input type="radio" name="question4" value="no" id="q4no">
+                <label for="q4no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>105. У своїй роботі, серед колег, я зазвичай не реагую а ні критику, а ні на комплементи.
+                Метод покарань та заохочень для мене є недійсним.</h3>
+            <div class="answer">
+                <input type="radio" name="question5" value="yes" id="q5yes">
+                <label for="q5yes">Так</label><br>
+                <input type="radio" name="question5" value="no" id="q5no">
+                <label for="q5no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>106. Коли я зачиняю двері, перевіряю, смикаючи за ручку, чи вони зачинились.</h3>
+            <div class="answer">
+                <input type="radio" name="question6" value="yes" id="q6yes">
+                <label for="q6yes">Так</label><br>
+                <input type="radio" name="question6" value="no" id="q6no">
+                <label for="q6no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>107. Трагічний фільм може настільки схвилювати мене, що його епізоди тривалий час
+                стоять у мене перед очима.</h3>
+            <div class="answer">
+                <input type="radio" name="question7" value="yes" id="q7yes">
+                <label for="q7yes">Так</label><br>
+                <input type="radio" name="question7" value="no" id="q7no">
+                <label for="q7no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>108. Починаючи нову справу, я одразу бачу всі складності в її виконанні.</h3>
+            <div class="answer">
+                <input type="radio" name="question8" value="yes" id="q8yes">
+                <label for="q8yes">Так</label><br>
+                <input type="radio" name="question8" value="no" id="q8no">
+                <label for="q8no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>109. В роботі я залишаю можливість приймати серйозні рішення іншим, більш важливим,
+                ніж я, людям.</h3>
+            <div class="answer">
+                <input type="radio" name="question9" value="yes" id="q9yes">
+                <label for="q9yes">Так</label><br>
+                <input type="radio" name="question9" value="no" id="q9no">
+                <label for="q9no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>110. В роботі або у стосунках з близькими я часто не використовую свій шанс на краще
+                через нерішучість.</h3>
+            <div class="answer">
+                <input type="radio" name="question10" value="yes" id="q10yes">
+                <label for="q10yes">Так</label><br>
+                <input type="radio" name="question10" value="no" id="q10no">
+                <label for="q10no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>111. Вживання ненормативної лексики або почуті від інших ненормативні слова – це для
+                мене завжди неприємно.</h3>
+            <div class="answer">
+                <input type="radio" name="question11" value="yes" id="q11yes">
+                <label for="q11yes">Так</label><br>
+                <input type="radio" name="question11" value="no" id="q11no">
+                <label for="q11no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>112. Мій настрій може змінюватися так різко, що радість раптово переростає у
+                роздратованість, і це заважає мені у спілкуванні з близькими.</h3>
+            <div class="answer">
+                <input type="radio" name="question12" value="yes" id="q12yes">
+                <label for="q12yes">Так</label><br>
+                <input type="radio" name="question12" value="no" id="q12no">
+                <label for="q12no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>113. Я наполегливо прагну до наміченої цілі, навіть якщо для цього потрібно зробити не
+                дуже гарні речі, наприклад, посваритися зі старими друзями.</h3>
+            <div class="answer">
+                <input type="radio" name="question13" value="yes" id="q13yes">
+                <label for="q13yes">Так</label><br>
+                <input type="radio" name="question13" value="no" id="q13no">
+                <label for="q13no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>114. Я прагну у всьому і всюди дотримуватися порядку (в справах, в речах, в людських
+                стосунках).</h3>
+            <div class="answer">
+                <input type="radio" name="question14" value="yes" id="q14yes">
+                <label for="q14yes">Так</label><br>
+                <input type="radio" name="question14" value="no" id="q14no">
+                <label for="q14no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>115. Коли мені треба вдягнутися на вечірку, я зазвичай викидаю все з шафи і шукаю, чим
+                би вразити всіх.</h3>
+            <div class="answer">
+                <input type="radio" name="question15" value="yes" id="q15yes">
+                <label for="q15yes">Так</label><br>
+                <input type="radio" name="question15" value="no" id="q15no">
+                <label for="q15no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>116. Однаково легко я можу забути, що мені хтось чи я комусь винний гроші.</h3>
+            <div class="answer">
+                <input type="radio" name="question16" value="yes" id="q16yes">
+                <label for="q16yes">Так</label><br>
+                <input type="radio" name="question16" value="no" id="q16no">
+                <label for="q16no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>117. Я часто відчуваю себе серед колег незручно, навіть якщо я їх добре знаю: не можу
+                подолати відчуття, що інші дивляться на мене і оцінюють, можливо, не зовсім позитивно.</h3>
+            <div class="answer">
+                <input type="radio" name="question17" value="yes" id="q17yes">
+                <label for="q17yes">Так</label><br>
+                <input type="radio" name="question17" value="no" id="q17no">
+                <label for="q17no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>118. Чорну, копітку роботу я виконую так само старанно, як справу, яка подобається.</h3>
+            <div class="answer">
+                <input type="radio" name="question18" value="yes" id="q18yes">
+                <label for="q18yes">Так</label><br>
+                <input type="radio" name="question18" value="no" id="q18no">
+                <label for="q18no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>119. Я переживаю тривалий час відчай чи горе інших людей, навіть якщо вони мені не
+                зовсім близькі люди.</h3>
+            <div class="answer">
+                <input type="radio" name="question19" value="yes" id="q19yes">
+                <label for="q19yes">Так</label><br>
+                <input type="radio" name="question19" value="no" id="q19no">
+                <label for="q19no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>120. Я боюся зробити щось не так, щоб не стати «героєм» пліток серед колег.</h3>
+            <div class="answer">
+                <input type="radio" name="question20" value="yes" id="q20yes">
+                <label for="q20yes">Так</label><br>
+                <input type="radio" name="question20" value="no" id="q20no">
+                <label for="q20no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>121. Я не надто самостійний – більше послідовник, ніж лідер, але можу бути відданим
+                гравцем у команді.</h3>
+            <div class="answer">
+                <input type="radio" name="question21" value="yes" id="q21yes">
+                <label for="q21yes">Так</label><br>
+                <input type="radio" name="question21" value="no" id="q21no">
+                <label for="q21no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>122. Практично щотижня мені сняться кошмари, особливо коли я виконую відповідальну
+                роботу.</h3>
+            <div class="answer">
+                <input type="radio" name="question22" value="yes" id="q22yes">
+                <label for="q22yes">Так</label><br>
+                <input type="radio" name="question22" value="no" id="q22no">
+                <label for="q22no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>123. Як правило, я роблю те, що хочу, не звіряючи свої вчинки з нормами поведінки.</h3>
+            <div class="answer">
+                <input type="radio" name="question23" value="yes" id="q23yes">
+                <label for="q23yes">Так</label><br>
+                <input type="radio" name="question15" value="no" id="q23no">
+                <label for="q23no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>124. Інші вважають мене дуже спокійною і врівноваженою людиною.</h3>
+            <div class="answer">
+                <input type="radio" name="question24" value="yes" id="q24yes">
+                <label for="q24yes">Так</label><br>
+                <input type="radio" name="question24" value="no" id="q24no">
+                <label for="q24no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>125. Я можу повністю розслабитися і не думати про свою справу, хоча б у вихідні дні.</h3>
+            <div class="answer">
+                <input type="radio" name="question25" value="yes" id="q25yes">
+                <label for="q25yes">Так</label><br>
+                <input type="radio" name="question25" value="no" id="q25no">
+                <label for="q25no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>126. Я дуже розсерджуся, якщо хтось зруйнує встановлений мною порядок на робочому
+                місці.</h3>
+            <div class="answer">
+                <input type="radio" name="question26" value="yes" id="q26yes">
+                <label for="q26yes">Так</label><br>
+                <input type="radio" name="question26" value="no" id="q26no">
+                <label for="q26no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>127. Під час розмови з іншою, навіть малознайомою людиною, я мимоволі переймаю
+                особливості її мови (картавість, слова-паразити тощо).</h3>
+            <div class="answer">
+                <input type="radio" name="question27" value="yes" id="q27yes">
+                <label for="q27yes">Так</label><br>
+                <input type="radio" name="question27" value="no" id="q27no">
+                <label for="q27no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>128. Я б отримав задоволення від подорожі «автостопом».</h3>
+            <div class="answer">
+                <input type="radio" name="question28" value="yes" id="q28yes">
+                <label for="q28yes">Так</label><br>
+                <input type="radio" name="question29" value="no" id="q28no">
+                <label for="q28no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>129. Іноді люди вважають мене не таким, як всі, тому що я одягаюсь по-своєму і здаюсь
+                їм нібито «з іншої планети».</h3>
+            <div class="answer">
+                <input type="radio" name="question29" value="yes" id="q29yes">
+                <label for="q29yes">Так</label><br>
+                <input type="radio" name="question29" value="no" id="q29no">
+                <label for="q29no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>130. Буває, що я повертаюся з дороги, щоб перевірити, що квартира або робоче місце
+                залишилися в порядку (перекрита вода, зачинені двері, вимкнуте світло тощо).</h3>
+            <div class="answer">
+                <input type="radio" name="question30" value="yes" id="q30yes">
+                <label for="q30yes">Так</label><br>
+                <input type="radio" name="question30" value="no" id="q30no">
+                <label for="q30no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>131. Зазвичай я подаю гроші жебракам у церві, вуличним музикантам, дітям, що часом
+                ходять по домівках.</h3>
+            <div class="answer">
+                <input type="radio" name="question31" value="yes" id="q31yes">
+                <label for="q31yes">Так</label><br>
+                <input type="radio" name="question31" value="no" id="q31no">
+                <label for="q31no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>132. Навіть, якщо я досягаю успіху, кожного разу помічаю, що не отримую повного
+                задоволення.</h3>
+            <div class="answer">
+                <input type="radio" name="question32" value="yes" id="q32yes">
+                <label for="q32yes">Так</label><br>
+                <input type="radio" name="question32" value="no" id="q32no">
+                <label for="q32no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>133. Якщо є вибір, я надаю перевагу все робити самостійно, без вказівок і порад.</h3>
+            <div class="answer">
+                <input type="radio" name="question33" value="yes" id="q33yes">
+                <label for="q33yes">Так</label><br>
+                <input type="radio" name="question33" value="no" id="q33no">
+                <label for="q33no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>134. Часто зранку я відчуваю, що погано виспався і відпочив, тому працюю з великою
+                напругою.</h3>
+            <div class="answer">
+                <input type="radio" name="question34" value="yes" id="q34yes">
+                <label for="q34yes">Так</label><br>
+                <input type="radio" name="question34" value="no" id="q34no">
+                <label for="q34no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>135. Я не належу до обережного типу людей: можу ризикнути, їхати на підвищеній
+                швидкості або трохи напідпитку, але завжди знаю, що роблю.</h3>
+            <div class="answer">
+                <input type="radio" name="question35" value="yes" id="q35yes">
+                <label for="q35yes">Так</label><br>
+                <input type="radio" name="question35" value="no" id="q35no">
+                <label for="q35no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>136. У мене бувають періоди такого занепокоєння, коли я хочу щось зробити, що не можу
+                встояти на місці – у мене все тремтить.</h3>
+            <div class="answer">
+                <input type="radio" name="question36" value="yes" id="q36yes">
+                <label for="q36yes">Так</label><br>
+                <input type="radio" name="question36" value="no" id="q36no">
+                <label for="q36no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>137. Іноді мене називають «трудоголіком», тому що я працюю дуже напружено, навіть
+                якщо справа не в оплаті роботи.</h3>
+            <div class="answer">
+                <input type="radio" name="question37" value="yes" id="q37yes">
+                <label for="q37yes">Так</label><br>
+                <input type="radio" name="question37" value="no" id="q37no">
+                <label for="q37no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>138. У мене все кипить у середині, якщо щось роблять не за правилами, і я можу
+                зірватися і накричати.</h3>
+            <div class="answer">
+                <input type="radio" name="question38" value="yes" id="q38yes">
+                <label for="q38yes">Так</label><br>
+                <input type="radio" name="question38" value="no" id="q38no">
+                <label for="q38no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>139. Навіть з тим, кого я явно не ціную, не люблю, не поважаю, я можу бути привітним і
+                люб’язним.</h3>
+            <div class="answer">
+                <input type="radio" name="question39" value="yes" id="q39yes">
+                <label for="q39yes">Так</label><br>
+                <input type="radio" name="question39" value="no" id="q39no">
+                <label for="q39no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>140. Я ненавиджу рутинну роботу, тому залишаю такі справи на потім, або взагалі не
+                займаюся ними.</h3>
+            <div class="answer">
+                <input type="radio" name="question40" value="yes" id="q40yes">
+                <label for="q40yes">Так</label><br>
+                <input type="radio" name="question40" value="no" id="q40no">
+                <label for="q40no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>141. Я висловлюю свої думки так, як вони приходять мені в голову, і не намагаюсь їх
+                спочатку «зачесати».</h3>
+            <div class="answer">
+                <input type="radio" name="question41" value="yes" id="q41yes">
+                <label for="q41yes">Так</label><br>
+                <input type="radio" name="question41" value="no" id="q41no">
+                <label for="q41no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>142. Я люблю роботу з високою особистою відповідальністю.</h3>
+            <div class="answer">
+                <input type="radio" name="question42" value="yes" id="q42yes">
+                <label for="q42yes">Так</label><br>
+                <input type="radio" name="question42" value="no" id="q42no">
+                <label for="q42no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>143. В дитинстві я приносив додому хворих, покинутих кошенят, собак, птахів, щоб
+                допомогти їм.</h3>
+            <div class="answer">
+                <input type="radio" name="question43" value="yes" id="q43yes">
+                <label for="q43yes">Так</label><br>
+                <input type="radio" name="question43" value="no" id="q43no">
+                <label for="q43no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>144. Я не сумніваюся, що досягну у роботі таких висот, як інші.</h3>
+            <div class="answer">
+                <input type="radio" name="question44" value="yes" id="q44yes">
+                <label for="q44yes">Так</label><br>
+                <input type="radio" name="question44" value="no" id="q44no">
+                <label for="q44no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>145. Перш, ніж прийняти рішення, я прислуховуюсь до корисної поради, навіть якщо це
+                стосується буденних проблем.</h3>
+            <div class="answer">
+                <input type="radio" name="question45" value="yes" id="q45yes">
+                <label for="q45yes">Так</label><br>
+                <input type="radio" name="question45" value="no" id="q45no">
+                <label for="q45no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>146. Коли мені потрібно ходити по різних організаціях і установах (у справах роботи чи
+                оформленні документів) – це для мене «тортури».</h3>
+            <div class="answer">
+                <input type="radio" name="question46" value="yes" id="q46yes">
+                <label for="q46yes">Так</label><br>
+                <input type="radio" name="question46" value="no" id="q46no">
+                <label for="q46no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>147. Мені подобається все робити спонтанно, не плануючи наперед.</h3>
+            <div class="answer">
+                <input type="radio" name="question47" value="yes" id="q47yes">
+                <label for="q47yes">Так</label><br>
+                <input type="radio" name="question47" value="no" id="q47no">
+                <label for="q47no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>148. Я висловлюю свої почуття палко і театрально.</h3>
+            <div class="answer">
+                <input type="radio" name="question48" value="yes" id="q48yes">
+                <label for="q48yes">Так</label><br>
+                <input type="radio" name="question48" value="no" id="q48no">
+                <label for="q48no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>149. Книги у своїй книжній шафі я розставлю:</h3>
+            <div class="answer">
+                <input type="radio" name="question49" value="a" id="q49a">
+                <label for="q49a">a) за розміром;</label><br>
+                <input type="radio" name="question49" value="b" id="q49b">
+                <label for="q49b">b) за змістом;</label><br>
+                <input type="radio" name="question49" value="c" id="q49c">
+                <label for="q49c">c) за дизайном обкладинок;</label><br>
+                <input type="radio" name="question49" value="d" id="q49d">
+                <label for="q49d">d) довго буду коливатися, як краще;</label><br>
+                <input type="radio" name="question49" value="e" id="q49e">
+                <label for="q49e">e) по черзі придбання: у такому порядку, що зрозуміло лише мені;</label><br>
+                <input type="radio" name="question49" value="f" id="q49f">
+                <label for="q49f">f) розкладу як прийдеться, і не тільки у шафі.</label><br>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>150. Якщо я несподівано отримую більше грошей, ніж очікував, я:</h3>
+            <div class="answer">
+                <input type="radio" name="question50" value="a" id="q50a">
+                <label for="q50a">a) відкладу на заощадження;</label><br>
+                <input type="radio" name="question50" value="b" id="q50b">
+                <label for="q50b">b) витрачу на справу, якою займаюся (книги, прилади, матеріали тощо);</label><br>
+                <input type="radio" name="question50" value="c" id="q50c">
+                <label for="q50c">c) куплю різні необовязкові, але «прикольні» речі;</label><br>
+                <input type="radio" name="question50" value="d" id="q50d">
+                <label for="q50d">d) прогуляю з друзями;</label><br>
+                <input type="radio" name="question50" value="e" id="q50e">
+                <label for="q50e">e) витрачу на благодійність або небагатих родичів;</label><br>
+                <input type="radio" name="question50" value="f" id="q50f">
+                <label for="q50f">f) буду довго мучатися, як краще витратити.</label><br>
+            </div>
+        </div>
+
+        <!-- Questions end -->
+        <button onclick="showBackBlock(3, event)">Попередній блок питань</button>
+        <button onclick="showNextBlock(3, event)">Наступний блок питань</button>
+    </form>
+
+</div>
+    <!-- #endregion -->
+
+    <!-- #region Block4 -->
+
+<div id="Block4" class="Block hidden">
+    <h2>Блок 4</h2>
+
+    <form class="test_form" action="#" method="post">
+        <!-- Questions begin -->
+        <div class="question">
+            <h3>151. Якщо по відношенню до мене вчинили несправедливо, я енергійно відстоюю свої
+                інтереси.</h3>
+            <div class="answer">
+                <input type="radio" name="question1" value="yes" id="q1yes">
+                <label for="q1yes">Так</label><br>
+                <input type="radio" name="question1" value="no" id="q1no">
+                <label for="q1no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>152. Мене приваблює зброя і бойові мистецтва.</h3>
+            <div class="answer">
+                <input type="radio" name="question2" value="yes" id="q2yes">
+                <label for="q2yes">Так</label><br>
+                <input type="radio" name="question2" value="no" id="q2no">
+                <label for="q2no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>153. Під час сварок у мене бувають такі бурхливі емоційні реакції (сльози, крик, лайливі
+                слова), за які потім соромно.</h3>
+            <div class="answer">
+                <input type="radio" name="question3" value="yes" id="q3yes">
+                <label for="q3yes">Так</label><br>
+                <input type="radio" name="question3" value="no" id="q3no">
+                <label for="q3no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>154. Я можу пробачити зраду у коханні чи дружбі.</h3>
+            <div class="answer">
+                <input type="radio" name="question4" value="yes" id="q4yes">
+                <label for="q4yes">Так</label><br>
+                <input type="radio" name="question4" value="no" id="q4no">
+                <label for="q4no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>155. Хоч я думаю, що розумію людей, вони кажуть, що у мене немає жодного поняття
+                про їхні почуття.</h3>
+            <div class="answer">
+                <input type="radio" name="question5" value="yes" id="q5yes">
+                <label for="q5yes">Так</label><br>
+                <input type="radio" name="question5" value="no" id="q5no">
+                <label for="q5no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>156. Якщо я мимоволі зроблю якусь помилку у спілкуванні з поважною людиною
+                (наприклад, скажу щось двозначне, або засміюсь невлад), я довго потім переживаю і
+                прошу вибачення.</h3>
+            <div class="answer">
+                <input type="radio" name="question6" value="yes" id="q6yes">
+                <label for="q6yes">Так</label><br>
+                <input type="radio" name="question6" value="no" id="q6no">
+                <label for="q6no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>157. Я відчуваю чужий біль гостріше, ніж більшість людей.</h3>
+            <div class="answer">
+                <input type="radio" name="question7" value="yes" id="q7yes">
+                <label for="q7yes">Так</label><br>
+                <input type="radio" name="question7" value="no" id="q7no">
+                <label for="q7no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>158. Я серйозна людина і часто надаю більшого значення стосункам, ніж вони того варті.</h3>
+            <div class="answer">
+                <input type="radio" name="question8" value="yes" id="q8yes">
+                <label for="q8yes">Так</label><br>
+                <input type="radio" name="question8" value="no" id="q8no">
+                <label for="q8no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>159. Коли я потрапляю у новий колектив, не хочу відрізнятися від інших, щоб не
+                залишатися «чужаком».</h3>
+            <div class="answer">
+                <input type="radio" name="question9" value="yes" id="q9yes">
+                <label for="q9yes">Так</label><br>
+                <input type="radio" name="question9" value="no" id="q9no">
+                <label for="q9no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>160. У відносинах з людьми я відчуваю складнощі через власну сором’язливість.</h3>
+            <div class="answer">
+                <input type="radio" name="question10" value="yes" id="q10yes">
+                <label for="q10yes">Так</label><br>
+                <input type="radio" name="question10" value="no" id="q10no">
+                <label for="q10no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>161. Я вважаю, що більшість людей говорять неправду, коли це в їхніх інтересах.</h3>
+            <div class="answer">
+                <input type="radio" name="question11" value="yes" id="q11yes">
+                <label for="q11yes">Так</label><br>
+                <input type="radio" name="question11" value="no" id="q11no">
+                <label for="q11no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>162. Під час розмови з керівником я можу перебити його і палко доводити свою точку
+                зору, не думаючи про наслідки.</h3>
+            <div class="answer">
+                <input type="radio" name="question12" value="yes" id="q12yes">
+                <label for="q12yes">Так</label><br>
+                <input type="radio" name="question12" value="no" id="q12no">
+                <label for="q12no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>163. Я активно виступаю на захист осіб, які підтримують мої ідеї.</h3>
+            <div class="answer">
+                <input type="radio" name="question13" value="yes" id="q13yes">
+                <label for="q13yes">Так</label><br>
+                <input type="radio" name="question13" value="no" id="q13no">
+                <label for="q13no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>164. Я деякий час можу стримуватися, коли зачіпають мою гідність, а потім «вибухаю».</h3>
+            <div class="answer">
+                <input type="radio" name="question14" value="yes" id="q14yes">
+                <label for="q14yes">Так</label><br>
+                <input type="radio" name="question14" value="no" id="q14no">
+                <label for="q14no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>165. Мені подобається цитувати блискучі або шокуючі висловлювання видатних людей.</h3>
+            <div class="answer">
+                <input type="radio" name="question15" value="yes" id="q15yes">
+                <label for="q15yes">Так</label><br>
+                <input type="radio" name="question15" value="no" id="q15no">
+                <label for="q15no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>166. Якщо доводиться чекати в черзі, я зазвичай намагаюсь знайти можливість бути
+                обслуженим швидче за інших.</h3>
+            <div class="answer">
+                <input type="radio" name="question16" value="yes" id="q16yes">
+                <label for="q16yes">Так</label><br>
+                <input type="radio" name="question16" value="no" id="q16no">
+                <label for="q16no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>167. Я не дуже довіряю людям, хоча мені б і хотілось: просто я хвилююсь, що вони
+                використають мене, якщо я не проявлю обережність.</h3>
+            <div class="answer">
+                <input type="radio" name="question17" value="yes" id="q17yes">
+                <label for="q17yes">Так</label><br>
+                <input type="radio" name="question17" value="no" id="q17no">
+                <label for="q17no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>168. Часто я ухожу з роботи пізніше, тому що хочу доробити все як слід.</h3>
+            <div class="answer">
+                <input type="radio" name="question18" value="yes" id="q18yes">
+                <label for="q18yes">Так</label><br>
+                <input type="radio" name="question18" value="no" id="q18no">
+                <label for="q18no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>169. Я легко втрачаю терпіння з людьми, які не розуміють, що їм говорять.</h3>
+            <div class="answer">
+                <input type="radio" name="question19" value="yes" id="q19yes">
+                <label for="q19yes">Так</label><br>
+                <input type="radio" name="question19" value="no" id="q19no">
+                <label for="q19no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>170. Іноді я відчуваю себе глибоко самотньою людиною.</h3>
+            <div class="answer">
+                <input type="radio" name="question20" value="yes" id="q20yes">
+                <label for="q20yes">Так</label><br>
+                <input type="radio" name="question20" value="no" id="q20no">
+                <label for="q20no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>171. Як правило, я погоджуюся з думкою більшості: якщо я незгодний, то зазвичай
+                залишаю свою думку при собі.</h3>
+            <div class="answer">
+                <input type="radio" name="question21" value="yes" id="q21yes">
+                <label for="q21yes">Так</label><br>
+                <input type="radio" name="question21" value="no" id="q21no">
+                <label for="q21no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>172. Мені важко підтримувати розмову з людиною, з якою ми щойно познайомилися.</h3>
+            <div class="answer">
+                <input type="radio" name="question22" value="yes" id="q22yes">
+                <label for="q22yes">Так</label><br>
+                <input type="radio" name="question22" value="no" id="q22no">
+                <label for="q22no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>173. Я відчуваю себе невдахою, коли чую про успіхи моїх знайомих і товаришів.</h3>
+            <div class="answer">
+                <input type="radio" name="question23" value="yes" id="q23yes">
+                <label for="q23yes">Так</label><br>
+                <input type="radio" name="question15" value="no" id="q23no">
+                <label for="q23no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>174. Мої стосунки з близькою людиною можуть бути дуже інтенсивними: почуття
+                можуть кидатися з однієї крайності в іншу – то я обожнюю її, то не можу переносити.</h3>
+            <div class="answer">
+                <input type="radio" name="question24" value="yes" id="q24yes">
+                <label for="q24yes">Так</label><br>
+                <input type="radio" name="question24" value="no" id="q24no">
+                <label for="q24no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>175. Я готовий відстоювати свої інтереси в суді, якщо зруйновані мої честь і гідність,
+                навіть при умові, що матеріальних збитків для мене немає.</h3>
+            <div class="answer">
+                <input type="radio" name="question25" value="yes" id="q25yes">
+                <label for="q25yes">Так</label><br>
+                <input type="radio" name="question25" value="no" id="q25no">
+                <label for="q25no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>176. Дуже зрідка критика і зауваження на мою адресу бувають справедливими.</h3>
+            <div class="answer">
+                <input type="radio" name="question26" value="yes" id="q26yes">
+                <label for="q26yes">Так</label><br>
+                <input type="radio" name="question26" value="no" id="q26no">
+                <label for="q26no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>177. У мене є такі якості, за якими я виразно переважаю інших людей.</h3>
+            <div class="answer">
+                <input type="radio" name="question27" value="yes" id="q27yes">
+                <label for="q27yes">Так</label><br>
+                <input type="radio" name="question27" value="no" id="q27no">
+                <label for="q27no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>178. Як правило, я не здатний тривалий час працювати або хвилюватися, чи сплачені мої
+                кредити, тому багато хто вважає мене безвідповідальним.</h3>
+            <div class="answer">
+                <input type="radio" name="question28" value="yes" id="q28yes">
+                <label for="q28yes">Так</label><br>
+                <input type="radio" name="question29" value="no" id="q28no">
+                <label for="q28no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>179. Я здатний зробити щось видатне.</h3>
+            <div class="answer">
+                <input type="radio" name="question29" value="yes" id="q29yes">
+                <label for="q29yes">Так</label><br>
+                <input type="radio" name="question29" value="no" id="q29no">
+                <label for="q29no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>180. Я почуваю себе ніяково, коли мною захоплюються або роблять компліменти.</h3>
+            <div class="answer">
+                <input type="radio" name="question30" value="yes" id="q30yes">
+                <label for="q30yes">Так</label><br>
+                <input type="radio" name="question30" value="no" id="q30no">
+                <label for="q30no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>181. Зазвичай я не спілкуюся з людьми, поки не переконаюся, що подобаюсь їм.</h3>
+            <div class="answer">
+                <input type="radio" name="question31" value="yes" id="q31yes">
+                <label for="q31yes">Так</label><br>
+                <input type="radio" name="question31" value="no" id="q31no">
+                <label for="q31no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>182. Я не можу бути абсолютно безтурботно веселим.</h3>
+            <div class="answer">
+                <input type="radio" name="question32" value="yes" id="q32yes">
+                <label for="q32yes">Так</label><br>
+                <input type="radio" name="question32" value="no" id="q32no">
+                <label for="q32no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>183. Якщо я впевнений, що моя думка є правильною, я зазвичай її довожу і відстоюю,
+                навіть якщо вона не співпадає з думкою більшості.</h3>
+            <div class="answer">
+                <input type="radio" name="question33" value="yes" id="q33yes">
+                <label for="q33yes">Так</label><br>
+                <input type="radio" name="question33" value="no" id="q33no">
+                <label for="q33no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>184. Часом я відчуваю себе розбитим.</h3>
+            <div class="answer">
+                <input type="radio" name="question34" value="yes" id="q34yes">
+                <label for="q34yes">Так</label><br>
+                <input type="radio" name="question34" value="no" id="q34no">
+                <label for="q34no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>185. Інколи мені кажуть, що я шукаю привід для суперечки, оскільки готовий сперечатися
+                та битися з кожним, хто не на моєму боці.</h3>
+            <div class="answer">
+                <input type="radio" name="question35" value="yes" id="q35yes">
+                <label for="q35yes">Так</label><br>
+                <input type="radio" name="question35" value="no" id="q35no">
+                <label for="q35no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>186. Інколи мене тягне поміняти у житті щось кардинально.</h3>
+            <div class="answer">
+                <input type="radio" name="question36" value="yes" id="q36yes">
+                <label for="q36yes">Так</label><br>
+                <input type="radio" name="question36" value="no" id="q36no">
+                <label for="q36no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>187. Я вірю, що в деяких ситуаціях доводиться «переступати» через інших, щоб дістатися
+                до потрібного місця.</h3>
+            <div class="answer">
+                <input type="radio" name="question37" value="yes" id="q37yes">
+                <label for="q37yes">Так</label><br>
+                <input type="radio" name="question37" value="no" id="q37no">
+                <label for="q37no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>188. Лише інколи можна щось здійснити поступовими, помірними методами, частіше
+                необхідно застосовувати силу.</h3>
+            <div class="answer">
+                <input type="radio" name="question38" value="yes" id="q38yes">
+                <label for="q38yes">Так</label><br>
+                <input type="radio" name="question38" value="no" id="q38no">
+                <label for="q38no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>189. Всі люди, з якими я співпрацюю, і всі організації, до яких я належу, є впливовими і
+                важливими.</h3>
+            <div class="answer">
+                <input type="radio" name="question39" value="yes" id="q39yes">
+                <label for="q39yes">Так</label><br>
+                <input type="radio" name="question39" value="no" id="q39no">
+                <label for="q39no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>190. Я азартна людина, тому можу ризикнути і розпочати нову, не знайому мені справу з
+                вірою в її успіх.</h3>
+            <div class="answer">
+                <input type="radio" name="question40" value="yes" id="q40yes">
+                <label for="q40yes">Так</label><br>
+                <input type="radio" name="question40" value="no" id="q40no">
+                <label for="q40no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>191. Мої ідеї та думки здаються такими, що випереджають час.</h3>
+            <div class="answer">
+                <input type="radio" name="question41" value="yes" id="q41yes">
+                <label for="q41yes">Так</label><br>
+                <input type="radio" name="question41" value="no" id="q41no">
+                <label for="q41no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>192. Якщо я беру в борг якусь річ або гроші, це «висить» на мені, як камінь, і я намагаюсь
+                скоріше віддати борг.</h3>
+            <div class="answer">
+                <input type="radio" name="question42" value="yes" id="q42yes">
+                <label for="q42yes">Так</label><br>
+                <input type="radio" name="question42" value="no" id="q42no">
+                <label for="q42no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>193. У мене дуже м’який характер, але я нічого не можу зробити з цим.</h3>
+            <div class="answer">
+                <input type="radio" name="question43" value="yes" id="q43yes">
+                <label for="q43yes">Так</label><br>
+                <input type="radio" name="question43" value="no" id="q43no">
+                <label for="q43no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>194. У мене немає близьких друзів, крім хіба що деяких членів сім’ї.</h3>
+            <div class="answer">
+                <input type="radio" name="question44" value="yes" id="q44yes">
+                <label for="q44yes">Так</label><br>
+                <input type="radio" name="question44" value="no" id="q44no">
+                <label for="q44no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>195. Мій зовнішній вигляд, манера спілкування, думки часто більш оригінальні, ніж у
+                інших.</h3>
+            <div class="answer">
+                <input type="radio" name="question45" value="yes" id="q45yes">
+                <label for="q45yes">Так</label><br>
+                <input type="radio" name="question45" value="no" id="q45no">
+                <label for="q45no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>196. Я схильний тривожитися за те, що мене чекає.</h3>
+            <div class="answer">
+                <input type="radio" name="question46" value="yes" id="q46yes">
+                <label for="q46yes">Так</label><br>
+                <input type="radio" name="question46" value="no" id="q46no">
+                <label for="q46no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>197. Я відчуваю задоволення від ризикованих вчинків заради забави.</h3>
+            <div class="answer">
+                <input type="radio" name="question47" value="yes" id="q47yes">
+                <label for="q47yes">Так</label><br>
+                <input type="radio" name="question47" value="no" id="q47no">
+                <label for="q47no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>198. Можливо, я перебільшую цінність себе як особистості, але, чесно кажучи, думаю, що
+                заслуговую на всілякі похвали.</h3>
+            <div class="answer">
+                <input type="radio" name="question48" value="yes" id="q48yes">
+                <label for="q48yes">Так</label><br>
+                <input type="radio" name="question48" value="no" id="q48no">
+                <label for="q48no">Ні</label>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>199. Якщо у мене на роботі виникне така ситуація, що треба поставити перед ким-небудь
+                складне завдання, я:</h3>
+            <div class="answer">
+                <input type="radio" name="question49" value="a" id="q49a">
+                <label for="q49a">a) обмалюю основну «генеральну» лінію, а деталі хай домислюють підлеглі,
+                    проявляють ініціативу, щоб зробили якнайкраще;</label><br>
+                <input type="radio" name="question49" value="b" id="q49b">
+                <label for="q49b">b) дам чіткі інструкції, намалюю схеми, напишу план і проконтролюю всі етапи
+                    виконання;</label><br>
+                <input type="radio" name="question49" value="c" id="q49c">
+                <label for="q49c">c) відкладу вирішення цієї складної проблеми, можливо, необхідність у її виконанні
+                    взагалі відпаде;</label><br>
+                <input type="radio" name="question49" value="d" id="q49d">
+                <label for="q49d">d) спочатку пораджуся зі старшими або більш досвідченими колегами, як це краще
+                    зробити;</label><br>
+                <input type="radio" name="question49" value="e" id="q49e">
+                <label for="q49e">e) мені такого завдання не дадуть;</label><br>
+                <input type="radio" name="question49" value="f" id="q49f">
+                <label for="q49f">f) краще виконаю завдання сам, щоб нікому не набридати, навіть якщо доведеться
+                    затриматися на роботі.</label><br>
+            </div>
+        </div>
+
+        <div class="question">
+            <h3>200. Якщо по телевізору в один і той же час йдуть різні передачі, я оберу канал, де
+                демонструють:</h3>
+            <div class="answer">
+                <input type="radio" name="question50" value="a" id="q50a">
+                <label for="q50a">a) політичні дебати;</label><br>
+                <input type="radio" name="question50" value="b" id="q50b">
+                <label for="q50b">b) бойовик;</label><br>
+                <input type="radio" name="question50" value="c" id="q50c">
+                <label for="q50c">c) щоу-концерт;</label><br>
+                <input type="radio" name="question50" value="d" id="q50d">
+                <label for="q50d">d) розважально-гумористична програма;</label><br>
+                <input type="radio" name="question50" value="e" id="q50e">
+                <label for="q50e">e) мелодрама;</label><br>
+                <input type="radio" name="question50" value="f" id="q50f">
+                <label for="q50f">f) битва екстрасенсів.</label><br>
+            </div>
+        </div>
+
+        <!-- Questions end -->
+        <button onclick="showBackBlock(4, event)">Попередній блок питань</button>
+        <button onclick="showNextBlock(4, event)">Завершити тестування</button>
+    </form>
+</div>
+
+    <!-- #endregion -->
+
+    <!-- #region Result Table -->
+
+<div id="Block5" class="Block hidden">
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th></th>
+            <th colspan="12" class="table_name">Типи акцентуацій</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td rowspan="25" class="trans" width="20px" >Номери питань та знак ключа (+,-, буква)</td>
+            <td class="trans">Наполегливо-недовірливий</td>
+            <td class="trans">Авторитарний</td>
+            <td class="trans">Демонстративний</td>
+            <td class="trans">Гипертимний</td>
+            <td class="trans">Замкнуто-заглиблений</td>
+            <td class="trans">Сумлінно-педантичний</td>
+            <td class="trans">Емотивний</td>
+            <td class="trans">Дистимний</td>
+            <td class="trans">Конформний</td>
+            <td class="trans">Сензитивно-тривожний</td>
+            <td class="trans">Нестійкий</td>
+            <td class="trans">Лабільний</td>
+          </tr>
+
+          <tr>
+            <td class="cell_name">1+</td>
+            <td class="cell_name">2+</td>
+            <td class="cell_name">3+</td>
+            <td class="cell_name">4+</td>
+            <td class="cell_name">5+</td>
+            <td class="cell_name">6+</td>
+            <td class="cell_name">7+</td>
+            <td class="cell_name">8+</td>
+            <td class="cell_name">9+</td>
+            <td class="cell_name">10+</td>
+            <td class="cell_name">2+</td>
+            <td class="cell_name">7+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">13+</td>
+            <td class="cell_name">14+</td>
+            <td class="cell_name">15+</td>
+            <td class="cell_name">16+</td>
+            <td class="cell_name">17+</td>
+            <td class="cell_name">18+</td>
+            <td class="cell_name">19+</td>
+            <td class="cell_name">17+</td>
+            <td class="cell_name">15-</td>
+            <td class="cell_name">21-</td>
+            <td class="cell_name">11+</td>
+            <td class="cell_name">12+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">25+</td>
+            <td class="cell_name">26+</td>
+            <td class="cell_name">27+</td>
+            <td class="cell_name">28+</td>
+            <td class="cell_name">29+</td>
+            <td class="cell_name">30+</td>
+            <td class="cell_name">22+</td>
+            <td class="cell_name">20+</td>
+            <td class="cell_name">21-</td>
+            <td class="cell_name">22+</td>
+            <td class="cell_name">23+</td>
+            <td class="cell_name">24+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">37+</td>
+            <td class="cell_name">38+</td>
+            <td class="cell_name">39+</td>
+            <td class="cell_name">40+</td>
+            <td class="cell_name">37+</td>
+            <td class="cell_name">42+</td>
+            <td class="cell_name">24+</td>
+            <td class="cell_name">32+</td>
+            <td class="cell_name">33-</td>
+            <td class="cell_name">34+</td>
+            <td class="cell_name">35+</td>
+            <td class="cell_name">36+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">49В</td>
+            <td class="cell_name">49А</td>
+            <td class="cell_name">49С</td>
+            <td class="cell_name">49Е</td>
+            <td class="cell_name">41+</td>
+            <td class="cell_name">49D</td>
+            <td class="cell_name">31+</td>
+            <td class="cell_name">44+</td>
+            <td class="cell_name">45+</td>
+            <td class="cell_name">46+</td>
+            <td class="cell_name">47+</td>
+            <td class="cell_name">43+</td>
+          </tr>
+          <tr>
+            
+            <td class="underline">50B</td>
+            <td class="underline">50A</td>
+            <td class="underline">50C</td>
+            <td class="underline">50D</td>
+            <td class="underline">49F</td>
+            <td class="underline">50E</td>
+            <td class="underline">43+</td>
+            <td class="underline">49E</td>
+            <td class="underline">49A</td>
+            <td class="underline">49D</td>
+            <td class="underline">50E</td>
+            <td class="underline">48+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">51+</td>
+            <td class="cell_name">52+</td>
+            <td class="cell_name">53+</td>
+            <td class="cell_name">54+</td>
+            <td class="cell_name">55+</td>
+            <td class="cell_name">56+</td>
+            <td class="cell_name">56+</td>
+            <td class="cell_name">58+</td>
+            <td class="cell_name">71+</td>
+            <td class="cell_name">60-</td>
+            <td class="cell_name">61+</td>
+            <td class="cell_name">57+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">63+</td>
+            <td class="cell_name">71+</td>
+            <td class="cell_name">65+</td>
+            <td class="cell_name">66+</td>
+            <td class="cell_name">59+</td>
+            <td class="cell_name">68-</td>
+            <td class="cell_name">57+</td>
+            <td class="cell_name">70+</td>
+            <td class="cell_name">72+</td>
+            <td class="cell_name">65+</td>
+            <td class="cell_name">64+</td>
+            <td class="cell_name">62+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">75+</td>
+            <td class="cell_name">76+</td>
+            <td class="cell_name">77+</td>
+            <td class="cell_name">78-</td>
+            <td class="cell_name">67+</td>
+            <td class="cell_name">80+</td>
+            <td class="cell_name">69+</td>
+            <td class="cell_name">82-</td>
+            <td class="cell_name">83+</td>
+            <td class="cell_name">68-</td>
+            <td class="cell_name">73+</td>
+            <td class="cell_name">74+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">87+</td>
+            <td class="cell_name">88+</td>
+            <td class="cell_name">89-</td>
+            <td class="cell_name">90+</td>
+            <td class="cell_name">79+</td>
+            <td class="cell_name">87+</td>
+            <td class="cell_name">81+</td>
+            <td class="cell_name">84+</td>
+            <td class="cell_name">95+</td>
+            <td class="cell_name">72+</td>
+            <td class="cell_name">85+</td>
+            <td class="cell_name">81+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">99C</td>
+            <td class="cell_name">99A</td>
+            <td class="cell_name">99B</td>
+            <td class="cell_name">99D</td>
+            <td class="cell_name">91+</td>
+            <td class="cell_name">92+</td>
+            <td class="cell_name">93+</td>
+            <td class="cell_name">86+</td>
+            <td class="cell_name">96+</td>
+            <td class="cell_name">84+</td>
+            <td class="cell_name">97+</td>
+            <td class="cell_name">86+</td>
+          </tr>
+          <tr>
+            
+            <td class="underline">100A</td>
+            <td class="underline">100E</td>
+            <td class="underline">100B</td>
+            <td class="underline">100D</td>
+            <td class="underline">99E</td>
+            <td class="underline">100C</td>
+            <td class="underline">94+</td>
+            <td class="underline">94+</td>
+            <td class="underline">99F</td>
+            <td class="underline">96+</td>
+            <td class="underline">100F</td>
+            <td class="underline">98+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">101+</td>
+            <td class="cell_name">102+</td>
+            <td class="cell_name">103+</td>
+            <td class="cell_name">104+</td>
+            <td class="cell_name">105+</td>
+            <td class="cell_name">106+</td>
+            <td class="cell_name">107+</td>
+            <td class="cell_name">108+</td>
+            <td class="cell_name">109+</td>
+            <td class="cell_name">107+</td>
+            <td class="cell_name">111-</td>
+            <td class="cell_name">104+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">113+</td>
+            <td class="cell_name">114+</td>
+            <td class="cell_name">115+</td>
+            <td class="cell_name">116+</td>
+            <td class="cell_name">117+</td>
+            <td class="cell_name">118+</td>
+            <td class="cell_name">119+</td>
+            <td class="cell_name">118+</td>
+            <td class="cell_name">120+</td>
+            <td class="cell_name">110+</td>
+            <td class="cell_name">123+</td>
+            <td class="cell_name">112+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">125-</td>
+            <td class="cell_name">126+</td>
+            <td class="cell_name">127+</td>
+            <td class="cell_name">128+</td>
+            <td class="cell_name">129+</td>
+            <td class="cell_name">130+</td>
+            <td class="cell_name">127+</td>
+            <td class="cell_name">120+</td>
+            <td class="cell_name">121+</td>
+            <td class="cell_name">117+</td>
+            <td class="cell_name">128+</td>
+            <td class="cell_name">124-</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">137+</td>
+            <td class="cell_name">138+</td>
+            <td class="cell_name">139+</td>
+            <td class="cell_name">140+</td>
+            <td class="cell_name">141+</td>
+            <td class="cell_name">142-</td>
+            <td class="cell_name">131+</td>
+            <td class="cell_name">132+</td>
+            <td class="cell_name">133-</td>
+            <td class="cell_name">122+</td>
+            <td class="cell_name">135+</td>
+            <td class="cell_name">136+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">149B</td>
+            <td class="cell_name">149A</td>
+            <td class="cell_name">149C</td>
+            <td class="cell_name">149F</td>
+            <td class="cell_name">149E</td>
+            <td class="cell_name">149D</td>
+            <td class="cell_name">143+</td>
+            <td class="cell_name">144-</td>
+            <td class="cell_name">142-</td>
+            <td class="cell_name">134+</td>
+            <td class="cell_name">140+</td>
+            <td class="cell_name">148+</td>
+          </tr>
+          <tr>
+            
+            <td class="underline">150B</td>
+            <td class="underline">150A</td>
+            <td class="underline">150C</td>
+            <td class="underline">150D</td>
+            <td class="underline">150B</td>
+            <td class="underline">150F</td>
+            <td class="underline">150E</td>
+            <td class="underline">150A</td>
+            <td class="underline">145+</td>
+            <td class="underline">146+</td>
+            <td class="underline">147+</td>
+            <td class="underline">150D</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">151+</td>
+            <td class="cell_name">152+</td>
+            <td class="cell_name">153+</td>
+            <td class="cell_name">154+</td>
+            <td class="cell_name">155+</td>
+            <td class="cell_name">156+</td>
+            <td class="cell_name">157+</td>
+            <td class="cell_name">158+</td>
+            <td class="cell_name">159+</td>
+            <td class="cell_name">160+</td>
+            <td class="cell_name">161+</td>
+            <td class="cell_name">153+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">163+</td>
+            <td class="cell_name">164+</td>
+            <td class="cell_name">165+</td>
+            <td class="cell_name">166+</td>
+            <td class="cell_name">165+</td>
+            <td class="cell_name">168+</td>
+            <td class="cell_name">169-</td>
+            <td class="cell_name">167+</td>
+            <td class="cell_name">161+</td>
+            <td class="cell_name">172+</td>
+            <td class="cell_name">173+</td>
+            <td class="cell_name">162+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">175+</td>
+            <td class="cell_name">176+</td>
+            <td class="cell_name">177+</td>
+            <td class="cell_name">178+</td>
+            <td class="cell_name">167+</td>
+            <td class="cell_name">180+</td>
+            <td class="cell_name">171+</td>
+            <td class="cell_name">170+</td>
+            <td class="cell_name">171+</td>
+            <td class="cell_name">180+</td>
+            <td class="cell_name">176+</td>
+            <td class="cell_name">166+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">187+</td>
+            <td class="cell_name">188+</td>
+            <td class="cell_name">189+</td>
+            <td class="cell_name">190+</td>
+            <td class="cell_name">179+</td>
+            <td class="cell_name">192+</td>
+            <td class="cell_name">181+</td>
+            <td class="cell_name">182+</td>
+            <td class="cell_name">173+</td>
+            <td class="cell_name">184+</td>
+            <td class="cell_name">185+</td>
+            <td class="cell_name">174+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">199A</td>
+            <td class="cell_name">199B</td>
+            <td class="cell_name">195+</td>
+            <td class="cell_name">199C</td>
+            <td class="cell_name">191+</td>
+            <td class="cell_name">199F</td>
+            <td class="cell_name">193+</td>
+            <td class="cell_name">184+</td>
+            <td class="cell_name">183-</td>
+            <td class="cell_name">196+</td>
+            <td class="cell_name">197+</td>
+            <td class="cell_name">186+</td>
+          </tr>
+          <tr>
+            
+            <td class="cell_name">200A</td>
+            <td class="cell_name">200В</td>
+            <td class="cell_name">200С</td>
+            <td class="cell_name">200D</td>
+            <td class="cell_name">200F</td>
+            <td class="cell_name">200F</td>
+            <td class="cell_name">200E</td>
+            <td class="cell_name">194+</td>
+            <td class="cell_name">199D</td>
+            <td class="cell_name">200E</td>
+            <td class="cell_name">199E</td>
+            <td class="cell_name">198+</td>
+          </tr>
+        </tbody>
+      </table>
+
+</div>
+      <!-- #endregion -->
     <script src="./script.js"></script>
 </body>
 </html>
