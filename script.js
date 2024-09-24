@@ -116,63 +116,103 @@
           
         //   // Викликаємо функцію
         //   checkAndHighlightRadios(radioIds, classToColor);
-        function checkAndHighlightRadiosByValue(tagName, value, classToColor) {
-            // Знаходимо всі елементи з певним тегом і значенням value
-            const radioButtons = document.querySelectorAll(`${tagName}[value="${value}"]`);
+        // function checkAndHighlightRadiosByValue(tagName, value, classToColor) {
+        //     // Знаходимо всі елементи з певним тегом і значенням value
+        //     const radioButtons = document.querySelectorAll(`${tagName}[value="${value}"]`);
           
-            // Якщо радіокнопок з таким значенням value немає, виводимо повідомлення і виходимо
-            if (!radioButtons.length) {
-              console.error(`Елементи з value ${value} не знайдені`);
-              return;
-            }
+        //     // Якщо радіокнопок з таким значенням value немає, виводимо повідомлення і виходимо
+        //     if (!radioButtons.length) {
+        //       console.error(`Елементи з value ${value} не знайдені`);
+        //       return;
+        //     }
           
-            // Проходимо по всіх знайдених радіокнопках
-            for (let i = 0; i < radioButtons.length; i++) {
-              const radioButton = radioButtons[i];
-              console.log(radioButton)
+        //     // Проходимо по всіх знайдених радіокнопках
+        //     for (let i = 0; i < radioButtons.length; i++) {
+        //       const radioButton = radioButtons[i];
+        //       console.log(radioButton)
           
-              // Перевіряємо, чи радіокнопка вибрана
-              if (radioButton.checked) {
-                // Якщо радіокнопка вибрана, зафарбовуємо всі елементи з класом
-                const elementsToColor = document.querySelectorAll(`.${classToColor}`);
+        //       // Перевіряємо, чи радіокнопка вибрана
+        //       if (radioButton.checked) {
+        //         // Якщо радіокнопка вибрана, зафарбовуємо всі елементи з класом
+        //         const elementsToColor = document.querySelectorAll(`.${classToColor}`);
                 
-                if (elementsToColor.length) {
-                  elementsToColor.forEach(element => {
-                    element.style.backgroundColor = 'green';
-                  });
-                  console.log(`Елементи з класом ${classToColor} зафарбовані через вибрану радіокнопку з value ${value}`);
-                }
-                return; // Закінчуємо функцію після закрашування
-              }
-            }
+        //         if (elementsToColor.length) {
+        //           elementsToColor.forEach(element => {
+        //             element.style.backgroundColor = 'green';
+        //           });
+        //           console.log(`Елементи з класом ${classToColor} зафарбовані через вибрану радіокнопку з value ${value}`);
+        //         }
+        //         return; // Закінчуємо функцію після закрашування
+        //       }
+        //     }
           
-            // Якщо жодна радіокнопка з таким value не вибрана, скидаємо колір
-            const elementsToReset = document.querySelectorAll(`.${classToColor}`);
-            elementsToReset.forEach(element => {
-              element.style.backgroundColor = 'red';
-            });
-            console.log(`Жодна радіокнопка з value ${value} не вибрана, елементи з класом ${classToColor} повернуті до початкового стану.`);
-            }
+        //     // Якщо жодна радіокнопка з таким value не вибрана, скидаємо колір
+        //     const elementsToReset = document.querySelectorAll(`.${classToColor}`);
+        //     elementsToReset.forEach(element => {
+        //       element.style.backgroundColor = 'red';
+        //     });
+        //     console.log(`Жодна радіокнопка з value ${value} не вибрана, елементи з класом ${classToColor} повернуті до початкового стану.`);
+        //     }
 
-            // document.querySelectorAll('input[type="radio"]').forEach(radio => {
-            //     radio.addEventListener('change', () => {
-            //       checkAndHighlightRadiosByValue(radio.value, 'cell_name');
-            //     });
-            //   });
+        //     // document.querySelectorAll('input[type="radio"]').forEach(radio => {
+        //     //     radio.addEventListener('change', () => {
+        //     //       checkAndHighlightRadiosByValue(radio.value, 'cell_name');
+        //     //     });
+        //     //   });
         
-        let btnfin = document.querySelector('.finish');
-        console.log(btnfin);  
+        // let btnfin = document.querySelector('.finish');
+        // console.log(btnfin);  
 
-        btnfin.addEventListener('click', (e)=>{
-            checkAndHighlightRadiosByValue('input', valueToCheck, classToColor);
-        });
+        // btnfin.addEventListener('click', (e)=>{
+        //     checkAndHighlightRadiosByValue('input', valueToCheck, classToColor);
+        // });
 
-          // Приклад використання
-          // Масив радіокнопок з певним значенням value
-          const valueToCheck = 'yes';
-          // Клас елементів для закрашування
-          const classToColor = 'cell_name';
+        //   // Приклад використання
+        //   // Масив радіокнопок з певним значенням value
+        //   const valueToCheck = 'yes';
+        //   // Клас елементів для закрашування
+        //   const classToColor = 'cell_name';
           
-          // Викликаємо функцію для радіокнопок з value "option1"
-          //checkAndHighlightRadiosByValue('input', valueToCheck, classToColor);
+        //   // Викликаємо функцію для радіокнопок з value "option1"
+        //   //checkAndHighlightRadiosByValue('input', valueToCheck, classToColor);
           
+        document.addEventListener("DOMContentLoaded", function() {
+            // Отримуємо всі радіо-кнопки
+            const radios = document.querySelectorAll('input[type="radio"]');
+            console.log(radios)
+        
+            // Додаємо слухача подій на зміну значення для кожної радіо-кнопки
+            radios.forEach(function(radio) {
+                radio.addEventListener("change", function(event) {
+                    // Отримуємо обрану радіо-кнопку
+                    const selectedRadio = event.target;
+        
+         // Отримуємо ID пов'язаних клітинок з data-атрибуту радіо-кнопки
+         const cellId = selectedRadio.getAttribute('data-cell-id');
+        //  console.log(cellId)
+         
+         // Шукаємо всі клітинки з таким же data-cell-id
+         const cells = document.querySelectorAll(`.cell_name[data-cell-id="${cellId}"]`);
+         console.log(cells)
+         
+         // Якщо знайдені клітинки, змінюємо їхній колір
+         if (cells.length > 0) {
+             cells.forEach(function(cell) {
+                 if (selectedRadio.value === "yes","no") {
+                     cell.style.backgroundColor = "lightgreen";
+                 };
+             });
+         } else {
+             console.log("Клітинки з таким ID не знайдено");
+         }
+         });
+    });
+});
+            // Якщо жодна радіокнопка з таким value не вибрана, скидаємо колір
+            const elementsToReset = document.querySelectorAll(`.cell_name, .underline`);
+            elementsToReset.forEach(element => {
+              element.style.backgroundColor = 'lightcoral';
+            });
+
+
+
