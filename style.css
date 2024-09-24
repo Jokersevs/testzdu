@@ -121,3 +121,14 @@ button:hover {
     transform: scale(1);
   }
 }
+
+@media (max-width: 710px) {
+    body {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    button {
+        align-items: center;
+    }
+}
